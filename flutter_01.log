@@ -1,0 +1,97 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --machine --start-paused -d 3ae1a1d6 --devtools-server-address http://127.0.0.1:9101/ --target D:\Hackathon_new_take_3\lib\main.dart
+
+## exception
+
+FileSystemException: FileSystemException: Cannot create link, path = 'D:\Hackathon_new_take_3\windows\flutter\ephemeral\.plugin_symlinks\firebase_core' (OS Error: Incorrect function.
+, errno = 1)
+
+```
+#0      _Link.throwIfError (dart:io/link.dart:254:7)
+#1      _Link.createSync (dart:io/link.dart:182:5)
+#2      ForwardingLink.createSync (package:file/src/forwarding/forwarding_link.dart:20:16)
+#3      ForwardingLink.createSync (package:file/src/forwarding/forwarding_link.dart:20:16)
+#4      _createPlatformPluginSymlinks (package:flutter_tools/src/flutter_plugins.dart:1061:12)
+#5      createPluginSymlinks (package:flutter_tools/src/flutter_plugins.dart:991:5)
+#6      refreshPluginsList (package:flutter_tools/src/flutter_plugins.dart:1093:5)
+<asynchronous suspension>
+#7      FlutterProject.ensureReadyForPlatformSpecificTooling (package:flutter_tools/src/project.dart:359:5)
+<asynchronous suspension>
+#8      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:1621:7)
+<asynchronous suspension>
+#9      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1323:27)
+<asynchronous suspension>
+#10     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#11     CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#12     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:348:9)
+<asynchronous suspension>
+#13     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#14     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:294:5)
+<asynchronous suspension>
+#15     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:112:9)
+<asynchronous suspension>
+#16     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#17     main (package:flutter_tools/executable.dart:90:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel master, 3.14.0-14.0.pre.333, on Microsoft Windows [Version 10.0.22621.2283], locale en-IN)
+    • Flutter version 3.14.0-14.0.pre.333 on channel master at C:\Users\chaak\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision e599dae423 (6 days ago), 2023-09-17 17:34:39 -0400
+    • Engine revision 9f3e46a21e
+    • Dart version 3.2.0 (build 3.2.0-171.0.dev)
+    • DevTools version 2.28.0-dev.8
+
+[✓] Windows Version (Installed version of Windows is version 10 or higher)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    • Android SDK at C:\Users\chaak\AppData\Local\Android\sdk
+    • Platform android-34, build-tools 34.0.0
+    • Java binary at: C:\Program Files\Android\Android Studio\jbr\bin\java
+    • Java version OpenJDK Runtime Environment (build 17.0.6+0-b2043.56-10027231)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop Windows apps (Visual Studio Community 2022 17.7.3)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.7.34024.191
+    • Windows 10 SDK version 10.0.22621.0
+
+[✓] Android Studio (version 2022.3)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.6+0-b2043.56-10027231)
+
+[✓] VS Code (version 1.82.2)
+    • VS Code at C:\Users\chaak\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.72.0
+
+[✓] Connected device (4 available)
+    • CPH2487 (mobile)  • 3ae1a1d6 • android-arm64  • Android 13 (API 33)
+    • Windows (desktop) • windows  • windows-x64    • Microsoft Windows [Version 10.0.22621.2283]
+    • Chrome (web)      • chrome   • web-javascript • Google Chrome 116.0.5845.188
+    • Edge (web)        • edge     • web-javascript • Microsoft Edge 117.0.2045.36
+
+[!] Network resources
+    ✗ A network error occurred while checking "https://maven.google.com/": Failed host lookup: 'maven.google.com'
+    ✗ A network error occurred while checking "https://github.com/": Failed host lookup: 'github.com'
+
+! Doctor found issues in 1 category.
+```
